@@ -41,3 +41,96 @@
   font-weight: 700;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'react-demo';
+  src:  url('../fonts/react-demo.eot?a8tjj9');
+  src:  url('../fonts/react-demo.eot?a8tjj9#iefix') format('embedded-opentype'),
+  url('../fonts/react-demo.ttf?a8tjj9') format('truetype'),
+  url('../fonts/react-demo.woff?a8tjj9') format('woff'),
+  url('../fonts/react-demo.svg?a8tjj9#react-demo') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'react-demo' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-add:before {
+  content: "\e145";
+}
+.icon-arrow_drop_down:before {
+  content: "\e5c5";
+}
+.icon-arrow_drop_up:before {
+  content: "\e5c7";
+}
+.icon-check:before {
+  content: "\e5ca";
+}
+.icon-close:before {
+  content: "\e5cd";
+}
+.icon-mode_edit:before {
+  content: "\e254";
+}
+.icon-date_range:before {
+  content: "\e916";
+}
+.icon-delete:before {
+  content: "\e872";
+}
+.icon-remove:before {
+  content: "\e15b";
+}
+.icon-search:before {
+  content: "\e8b6";
+}
+.icon-sort:before {
+  content: "\f0dc";
+}
+.icon-unsorted:before {
+  content: "\f0dc";
+}
+.icon-sort-desc:before {
+  content: "\f0dd";
+}
+.icon-sort-down:before {
+  content: "\f0dd";
+}
+.icon-sort-asc:before {
+  content: "\f0de";
+}
+.icon-sort-up:before {
+  content: "\f0de";
+}
+.icon-angle-double-left:before {
+  content: "\f100";
+}
+.icon-angle-double-right:before {
+  content: "\f101";
+}
+.icon-angle-left:before {
+  content: "\f104";
+}
+.icon-angle-right:before {
+  content: "\f105";
+}
+.icon-angle-up:before {
+  content: "\f106";
+}
+.icon-angle-down:before {
+  content: "\f107";
+}

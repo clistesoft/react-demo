@@ -1,0 +1,102 @@
+// Core variables and mixins
+@import '../../../assets/stylesheets/core';
+
+.checkbox {
+  position: relative;
+  display: inline-block;
+  height: rem(25px);
+  vertical-align: middle;
+  
+  /* Small Checkbox*/
+  &.checkbox.checkbox--sm {
+    width: 100%;
+    height: 20px;
+  
+    label {
+  
+      &:before {
+        width: rem(20px);
+        height: rem(20px);
+      }
+  
+      &:after {
+        font-size: rem(19px);
+        line-height: rem(19px);
+      }
+    }
+  }
+  
+  /* Half Checked*/
+  &.half-checked{
+    label{
+      &:after{
+        content: "\e15b";
+        font-family: 'react-demo';
+      }
+    }
+  }
+  
+  /* Base for Input styling */
+  input {
+    width: 100%;
+    margin: 0;
+    display: none;
+  }
+  
+  /* Base for label styling */
+  label {
+    cursor: pointer;
+    vertical-align: middle;
+    padding-left: 30px;
+    width: 100%;
+    height: 100%;
+  
+    /* checkbox aspect */
+    &:before{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: rem(25px);
+      height: rem(25px);
+      border: rem(1px) solid map_get($colors, 'gray-45');
+      background: map_get($colors, 'gray-80');
+    }
+  
+    /* checked mark aspect */
+    &:after {
+      opacity: 0;
+      content: '\e5ca';
+      font-family: 'react-demo';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      @include translate(0, -50%);
+      font-size: 25px;
+      line-height: 25px;
+      color: map_get($colors, 'white');
+      @include transition( all, .2s, ease-in-out);
+    }
+  }
+  
+  /* checked mark aspect changes */
+  input[type=checkbox]:checked + label {
+    
+    &:before{
+      background: map_get($colors, 'gray-45');
+      @include transition( all, .2s, ease-in-out);
+    }
+    
+    &:after {
+      opacity: 1;
+    }
+  }
+  
+  /* disabled checkbox */
+  input[type=checkbox]:disabled + label:after {
+    background: map_get($colors, 'gray-97');
+    border: rem(2px) solid map_get($colors, 'gray-80');
+    cursor: not-allowed;
+  }
+  
+}

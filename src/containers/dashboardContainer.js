@@ -7,6 +7,7 @@ import CardHeader from "../component/core/Card/CardHeader";
 import CardBlock from "../component/core/Card/CardBlock";
 import CardFooter from "../component/core/Card/CardFooter";
 import Avatar from "../component/core/Avatar/Avatar";
+import Checkbox from "../component/core/Checkbox/Checkbox";
 
 
 
@@ -41,6 +42,13 @@ class DashboardContainer extends PureComponent {
               Card Footer Here
             </CardFooter>
           </Card>
+        </div>
+  
+        <div className="-content-wrap">
+          <h3 className="content-name">Checkbox</h3>
+          <Checkbox name="Checkbox" label="Checkbox"/>
+          <Checkbox name="Checkbox 1" label="Checkbox default checked" checked/>
+          <Checkbox name="Checkbox 2" label="Checkbox disabled" disabled/>
         </div>
         
         
