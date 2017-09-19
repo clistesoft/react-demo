@@ -13,8 +13,7 @@ class CardFooter extends PureComponent{
   render(){
     return (
       <div className="card-footer">
-        <button>ADD</button>
-        {/*{this.props.children}*/}
+        {this.props.children}
       </div>
     );
   }

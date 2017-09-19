@@ -1,0 +1,22 @@
+// Core variables and mixins
+@import '../assets/stylesheets/core';
+
+.dashboard-wrapper{
+  @include flexbox();
+  @include flex-direction(column);
+}
+
+.-content-wrap{
+  margin-bottom: 20px;
+  
+  .avatar{
+    margin-right: 10px;
+  }
+}
+
+.content-name{
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 700;
+}
