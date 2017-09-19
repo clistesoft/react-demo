@@ -1,0 +1,56 @@
+// Core variables and mixins
+@import '../../../assets/stylesheets/core';
+
+
+.avatar {
+  position: relative;
+
+  background: map-get($colors,'gray-25');
+  border-radius: 50%;
+  color: #fff;
+  display: inline-block;
+  font-size: rem(14px);
+  font-weight: 300;
+  line-height: 1;
+  vertical-align: middle;
+  width: rem(32px);
+  height: rem(32px);
+
+  &.avatar--xs {
+    font-size: rem(8px);
+    width: rem(16px);
+    height: rem(16px);
+  }
+  &.avatar--sm {
+    font-size: rem(10px);
+    width: rem(24px);
+    height: rem(24px);
+  }
+  &.avatar--lg {
+    font-size: rem(20px);
+    width: rem(48px);
+    height: rem(48px);
+  }
+  &.avatar--xl {
+    font-size: rem(26px);
+    width: rem(64px);
+    height: rem(64px);
+  }
+
+  img {
+    border-radius: 50%;
+    height: 100%;
+    position: relative;
+    width: 100%;
+  }
+  &[data-initial]::before {
+    text-transform: uppercase;
+    color: currentColor;
+    content: attr(data-initial);
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}

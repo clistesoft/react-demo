@@ -1,0 +1,24 @@
+// rem
+$rem-baseline: 16px;
+$rem-fallback: false;
+$rem-px-only: false;
+
+// colours
+$colors: (
+  //primary colors
+  'green': #3DC057, //
+  'red': #F5463D, //
+
+  'gray-97': #F8F8F8, //3% black
+  'gray-89': #E4E4E4, //11% black
+  'gray-80': #CCCCCC, //20% black
+  'gray-45': #727272, //55% black
+  'gray-25': #3F3F3F, //75% black
+  'gray-12': #1f1f1f, //88% black
+  'gray-05': #0d0d0d, //95% black
+
+  'white': #FFFFFF, //white
+  'black': #000000 //black 100%
+);
+
+$font-base: 'Open Sans','Trebuchet MS','Lucida Grande','Lucida Sans Unicode','Lucida Sans',Tahoma,sans-serif;

@@ -1,0 +1,13 @@
+// Core variables and mixins
+@import '../../../assets/stylesheets/core';
+
+.card-header{
+  margin: 0;
+  padding: rem(24px 16px);
+  border-bottom: 1px solid map_get($colors , 'gray-80');
+  
+  > h3{
+    margin: 0;
+  }
+  
+}

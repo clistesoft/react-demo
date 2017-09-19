@@ -1,0 +1,24 @@
+// Core variables and mixins
+@import '../../assets/stylesheets/core';
+
+
+.rd-user-block{
+  @include flexbox();
+  @include justify-content(space-between);
+  @include align-items(center);
+
+}
+
+.rd-user-block__name{
+  text-align: right;
+  padding-right: rem(16px);
+  font-size: rem(12px);
+  line-height: rem(18px);
+  color: map-get($colors,'gray-25');
+
+  strong{
+    display: block;
+    font-weight: 600;
+  }
+
+}

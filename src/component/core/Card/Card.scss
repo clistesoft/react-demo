@@ -1,0 +1,6 @@
+// Core variables and mixins
+@import '../../../assets/stylesheets/core';
+
+.card{
+  background-color: map_get($colors, 'white');
+}

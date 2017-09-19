@@ -1,0 +1,14 @@
+// Core variables and mixins
+@import "core";
+
+// Fonts
+@import "fonts";
+
+// Pure css
+@import '../../../node_modules/purecss-sass/vendor/assets/stylesheets/purecss/base';
+@import '../../../node_modules/purecss-sass/vendor/assets/stylesheets/purecss/grids';
+@import '../../../node_modules/purecss-sass/vendor/assets/stylesheets/purecss/grids-responsive';
+
+
+// Custom
+@import "global";

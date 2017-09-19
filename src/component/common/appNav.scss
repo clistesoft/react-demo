@@ -1,0 +1,52 @@
+// Core variables and mixins
+@import '../../assets/stylesheets/core';
+
+//nav
+.rd-nav{
+  @include flex(1);
+  padding: rem(30px 0);
+}
+
+.rd-nav__items{ //UL
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  > .rd-nav__item{
+    position: relative;
+
+    > a {
+      color: #FFF;
+      text-decoration: none;
+      display: block;
+      padding: rem(18px 0 18px 54px);
+      background-color: map-get($colors, 'gray-25');
+      font-size: rem(18px);
+      line-height: 1;
+      font-weight: 600;
+      @include transition(all, .3s, ease-in-out);
+
+      &:hover, &:focus{
+        background-color: map-get($colors, 'gray-05');
+      }
+
+      &.active{
+        background-color: map-get($colors, 'gray-05');
+      }
+    }
+
+
+    &:before{
+      content:'';
+      position: absolute;
+      left: rem(18px);
+      top: rem(18px);
+      width: rem(18px);
+      height: rem(18px);
+      background-color: map-get($colors, 'gray-45');
+      @include border-radius(50%);
+    }
+  }
+
+}
+

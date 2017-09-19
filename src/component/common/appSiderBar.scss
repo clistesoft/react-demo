@@ -1,0 +1,47 @@
+// Core variables and mixins
+@import '../../assets/stylesheets/core';
+
+// Sidebar SCSS
+.rd-sidebar{
+  width: rem(300px);
+  background-color: map-get($colors, 'gray-25');
+  @include flexbox();
+  @include flex-direction(column);
+}
+
+.rd-sidebar__header{
+  @include flexbox();
+  @include align-items(center);
+  height: rem(96px);
+  border-bottom: 1px solid map-get($colors, 'gray-12');
+  
+}
+
+.rd-sidebar__logo-container{
+  @include flexbox();
+  @include align-items(center);
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.rd-sidebar__logo{
+  width: rem(80px);
+  margin-left: rem(25px);
+}
+
+.rd-sidebar__footer{
+  @include flexbox();
+  @include justify-content(center);
+  @include align-items(center);
+  height: rem(96px);
+  border-top: 1px solid map-get($colors, 'gray-12');
+
+  > p{
+    color: map-get($colors, 'gray-89');
+    margin: 0;
+    font-weight: 300;
+    font-size: rem(13px);
+  }
+}

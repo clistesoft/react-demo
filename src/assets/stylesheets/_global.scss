@@ -1,0 +1,45 @@
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+html{
+  @include rem-baseline;
+}
+
+html, body {
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  background-color: map-get($colors, 'gray-89');
+  font-family: $font-base;
+  line-height: 1.2;
+  font-weight: 300;
+}
+
+main{
+  @include flexbox();
+  @include flex-direction(column);
+  min-height: 100vh;
+}
+
+.rd-container{
+  @include flexbox();
+  @include flex(1);
+}
+
+// Content SCSS
+.rd-content{
+  @include flexbox();
+  @include flex-direction(column);
+  @include flex(1);
+}
+
+
+// Page SCSS
+.rd-page{
+  @include flex(1);
+  padding: rem(25px);
+}
