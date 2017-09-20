@@ -59,8 +59,8 @@
       top: 0;
       width: rem(25px);
       height: rem(25px);
-      border: rem(1px) solid map_get($colors, 'gray-45');
-      background: map_get($colors, 'gray-80');
+      border: rem(1px) solid map_get($colors, 'purple');
+      background: map_get($colors, 'purple');
     }
   
     /* checked mark aspect */
@@ -83,7 +83,7 @@
   input[type=checkbox]:checked + label {
     
     &:before{
-      background: map_get($colors, 'gray-45');
+      background: map_get($colors, 'purple');
       @include transition( all, .2s, ease-in-out);
     }
     
@@ -94,8 +94,8 @@
   
   /* disabled checkbox */
   input[type=checkbox]:disabled + label:after {
-    background: map_get($colors, 'gray-97');
-    border: rem(2px) solid map_get($colors, 'gray-80');
+    background: map_get($colors, 'purple');
+    border: rem(2px) solid map_get($colors, 'purple');
     cursor: not-allowed;
   }
   

@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 
-import './SwitchInput.css'
+import './SwitchInput.scss'
 
 /**
  * Switch.

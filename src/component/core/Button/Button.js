@@ -3,7 +3,7 @@ import { Link } from 'react-router'
 import PropTypes from 'prop-types';
 
 import classNames from 'classnames/bind';
-import './Button.css'
+import './Button.scss'
 
 /**
  * Button.

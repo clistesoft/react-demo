@@ -20,18 +20,18 @@
       text-decoration: none;
       display: block;
       padding: rem(18px 0 18px 54px);
-      background-color: map-get($colors, 'gray-25');
+      background-color: map-get($colors, 'purple');
       font-size: rem(18px);
       line-height: 1;
       font-weight: 600;
       @include transition(all, .3s, ease-in-out);
 
       &:hover, &:focus{
-        background-color: map-get($colors, 'gray-05');
+        background-color: map-get($colors, 'deep-purple');
       }
 
       &.active{
-        background-color: map-get($colors, 'gray-05');
+        background-color: map-get($colors, 'deep-purple');
       }
     }
 
@@ -43,7 +43,7 @@
       top: rem(18px);
       width: rem(18px);
       height: rem(18px);
-      background-color: map-get($colors, 'gray-45');
+      background-color: map-get($colors, 'white');
       @include border-radius(50%);
     }
   }

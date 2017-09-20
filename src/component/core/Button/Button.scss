@@ -7,9 +7,9 @@
   font-weight: 400;
   font-size: rem(13px);
   line-height: rem(26px);
-  border: 1px solid map-get($colors, 'gray-45');
+  border: 1px solid map-get($colors, 'purple');
   background-color: transparent;
-  color: map_get($colors, 'gray-25');
+  color: map_get($colors, 'purple');
   padding: rem(8px 20px);
   text-transform: uppercase;
   @include border-radius(rem(2px));
@@ -26,8 +26,8 @@
 }
 
 .button--primary {
-  background-color: map-get($colors, 'gray-25');
-  border-color: map_get($colors, 'gray-25');
+  background-color: map-get($colors, 'purple');
+  border-color: map_get($colors, 'purple');
   color: map_get($colors, 'white');
 }
 

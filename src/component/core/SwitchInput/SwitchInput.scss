@@ -4,7 +4,7 @@
 .switch {
   display: inline-block;
   position: relative;
-  border: rem(1px) solid map_get($colors, 'gray-25');
+  border: rem(1px) solid map_get($colors, 'purple');
   border-radius: rem(28px);
   width: auto;
   @include transition( all, .2s, ease-out);
@@ -22,7 +22,7 @@
     top: rem(2px);
     width: rem(26px);
     height: rem(26px);
-    background-color: map_get($colors, 'gray-25');
+    background-color: map_get($colors, 'purple');
     border-radius: rem(28px);
     display: block;
     @include transition( all, .2s, ease-out);
