@@ -1,0 +1,117 @@
+// Core variables and mixins
+@import '../../../assets/stylesheets/core';
+
+.form-control{
+  display: block;
+  width: 100%;
+  height: rem(44px);
+  font-size: rem(15px);
+  line-height: rem(30px);
+  font-weight: 400;
+  color: map_get($colors, 'gray-25');
+  padding: rem(6px 10px);
+  border: 1px solid map-get($colors, 'gray-80');
+  @include border-radius(2px);
+  @include tab-focus();
+
+  &::-webkit-input-placeholder {
+    font-style: italic;
+    color: map_get($colors, 'gray-62');
+  }
+
+  &::-moz-placeholder {
+    font-style: italic;
+    color: map_get($colors, 'gray-62');
+  }
+
+  &:-ms-input-placeholder {
+    font-style: italic;
+    color: map_get($colors, 'gray-62');
+  }
+
+  &:-moz-placeholder {
+    font-style: italic;
+    color: map_get($colors, 'gray-62');
+  }
+}
+
+input[type="search"]{
+  box-sizing: border-box;
+}
+
+
+.form-control.disabled, .form-control:disabled {
+  cursor: not-allowed;
+  background-color: map_get($colors, 'gray-89');
+}
+
+// input[type='file'] custom scss
+
+.file-control{
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: rem(44px);
+  margin-bottom: 0;
+  
+  
+  > .form-control{
+    min-width: 14rem;
+    width: 100%;
+    height: rem(44px);
+    margin: 0;
+    opacity: 0;
+    padding: 0;
+  }
+  
+  > .form-control--file{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 5;
+    height: rem(44px);
+    padding: .5rem 1rem;
+    line-height: 1.5;
+    color: #495057;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #fff;
+    border: 1px solid map-get($colors, 'gray-80');
+    
+    &:lang(en)::before{
+      content: "Browse";
+      font-size: 13px;
+      line-height: 18px;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+  
+    &::before{
+      position: absolute;
+      top: -1px;
+      right: -1px;
+      bottom: -1px;
+      z-index: 6;
+      display: block;
+      height: rem(44px);
+      padding: rem(14px 16px);
+      line-height: 1.5;
+      color: #495057;
+      background-color: map_get($colors, 'gray-89');
+      border: 1px solid map_get($colors, 'gray-80');
+      @include border-radius(0);
+    }
+    
+    &:lang(en):empty::after {
+      content: "Choose file...";
+      color: map_get($colors, 'gray-33');
+      font-size: 13px;
+      line-height: 18px;
+  
+    }
+  }
+}

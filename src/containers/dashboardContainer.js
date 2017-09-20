@@ -8,10 +8,29 @@ import CardBlock from "../component/core/Card/CardBlock";
 import CardFooter from "../component/core/Card/CardFooter";
 import Avatar from "../component/core/Avatar/Avatar";
 import Checkbox from "../component/core/Checkbox/Checkbox";
+import TextInput from "../component/core/TextInput/TextInput";
+import SwitchInput from "../component/core/SwitchInput/SwitchInput";
+import {Link} from "react-router";
 
 
 
 class DashboardContainer extends PureComponent {
+  constructor(props) {
+    super(props);
+    this.state = { activeTab:'1'};
+    this.toggleTabs = this.toggleTabs.bind(this);
+  }
+  
+  //Methode For Tabs
+  toggleTabs(tab){
+    if (this.state.activeTab !== tab) {
+      this.setState({
+        activeTab: tab
+      });
+    }
+  }
+  
+  
   render() {
     return (
       <div className="dashboard-wrapper">
@@ -50,12 +69,21 @@ class DashboardContainer extends PureComponent {
           <Checkbox name="Checkbox 1" label="Checkbox default checked" checked/>
           <Checkbox name="Checkbox 2" label="Checkbox disabled" disabled/>
         </div>
-        
-        
+  
+        <div className="-content-wrap">
+          <h3 className="content-name">TextInput</h3>
+          <TextInput />
+        </div>
+  
+        <div className="-content-wrap">
+          <h3 className="content-name">Switch Input</h3>
+          <SwitchInput inactiveValue="No" activeValue="Yes" />
+        </div>
         
       </div>
     );
   }
 }
+
 
 export default DashboardContainer;

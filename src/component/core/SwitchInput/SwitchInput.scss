@@ -1,0 +1,83 @@
+// Core variables and mixins
+@import '../../../assets/stylesheets/core';
+
+.switch {
+  display: inline-block;
+  position: relative;
+  border: rem(1px) solid map_get($colors, 'gray-25');
+  border-radius: rem(28px);
+  width: auto;
+  @include transition( all, .2s, ease-out);
+  
+  > label{
+    height: rem(30px);
+    display: block;
+    cursor: pointer;
+  }
+  
+  
+  .switch__circle {
+    position: absolute;
+    left: rem(2px);
+    top: rem(2px);
+    width: rem(26px);
+    height: rem(26px);
+    background-color: map_get($colors, 'gray-25');
+    border-radius: rem(28px);
+    display: block;
+    @include transition( all, .2s, ease-out);
+  }
+  
+  input[type="checkbox"]{
+    display: none;
+  }
+  
+  input[type="checkbox"] ~ .switch__label{
+  
+    padding-left: rem(28px);
+    padding-right: 0;
+  
+    span{
+      line-height: rem(30px);
+      font-size: rem(13px);
+      font-weight: 400;
+      letter-spacing: rem(1px);
+      text-transform: uppercase;
+      padding: rem(0 10px);
+    }
+
+    > .switch__circle{
+      left: 0;
+      margin-left: rem(2px);
+    }
+    
+    .switch__label-on{
+      display: inline-block;
+    }
+    
+    .switch__label-off{
+      display: none;
+    }
+    
+  }
+  
+  input[type="checkbox"]:checked ~ .switch__label{
+  
+    padding-right: rem(28px);
+    padding-left: 0;
+    
+    > .switch__circle{
+      left: 100%;
+      margin-left: rem(-28px);
+    }
+  
+    .switch__label-on{
+      display: none;
+    }
+  
+    .switch__label-off{
+      display: inline-block;
+    }
+    
+  }
+}
