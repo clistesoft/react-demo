@@ -36,7 +36,7 @@
   @include justify-content(center);
   @include align-items(center);
   height: rem(96px);
-  border-top: 1px solid map-get($colors, 'gray-12');
+  border-top: 1px solid map-get($colors, 'deep-purple');
 
   > p{
     color: map-get($colors, 'gray-89');
